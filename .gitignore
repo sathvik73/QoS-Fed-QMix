@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Exclude all huge result buffers individually just in case
+result/*
+!result/.gitkeep
+!result/comparison_plots_detailed
+!result/comparison_plots_detailed/*
+
+model/*
+!model/.gitkeep
+
+report.log
+.vscode/*
+.idea/
+
+# Heavily ignore huge AI dumps
+*.zip
+*.npy
+*.npz
+*.pkl
+
+# Ignore sensitive drafts
+*.pdf
+*.tex
+
+# Ignore run folders
+*run/
+original run/
+proposed run/
+modelqmix run/
+qmix run/
+
+# Ignore big data
+*.h5
+*.hdf5
