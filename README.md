@@ -27,7 +27,7 @@ For example, if you want to train a model-aided FedQMIX on the RDM map with 3 ag
 ```shell    
 $ python main.py --map=RDM --federated=True --model=True --alg=qmix --n_agents=3 --tag=model_aided_fedqmix --total_episodes=30000
 ```
-The coomand we used:
+The command that we used:
 ```shell
 $ python main.py --total_episodes 30000 --anneal_steps 2000 --model_learning_period 1000 --alg qmix --map RDM --n_agents 3 --load_model True --evaluate_cycle 1 --seed 42 --model True --priority --federated True --tag _proposedf
 ```
