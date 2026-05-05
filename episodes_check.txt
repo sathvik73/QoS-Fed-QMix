@@ -1,4 +1,0 @@
-proposed_run/result/qmix/RDM_proposedf/log_params.txt: total_episodes = 30000
-modelqmix_run/result/qmix/RDM_model_qmix/log_params.txt: total_episodes = 30000
-qmix_run/result/qmix/RDM_qmix/log_params.txt: total_episodes = 30000
-original_run/result/qmix/RDM_original/log_params.txt: total_episodes = 30000
