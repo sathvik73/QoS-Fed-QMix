@@ -1,0 +1,20 @@
+
+--- proposed ---
+global_data.npy: shape = (601,)
+global_rewards.npy: shape = (601,)
+episode_priority_data_0.npy: shape = (601,)
+
+--- modelqmix ---
+episode_data_.npy: shape = (600,)
+episode_rewards_.npy: shape = (600,)
+episode_priority_data_.npy: shape = (600,)
+
+--- qmix ---
+episode_data_.npy: shape = (1580,)
+episode_rewards_.npy: shape = (1580,)
+episode_priority_data_.npy: shape = (1580,)
+
+--- original ---
+global_data.npy: shape = (601,)
+global_rewards.npy: shape = (601,)
+episode_priority_data_0.npy: shape = (601,)

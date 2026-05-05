@@ -1,0 +1,14 @@
+\begin{table*}[htbp]
+\centering
+\caption{Comprehensive Performance Benchmarking: Cumulative Rewards and All Multi-Priority Extraction Ratios at 30,000 Episodes}
+\label{tab:performance_summary_all}
+\begin{tabular}{@{}lcccccccc@{}}
+\toprule
+\textbf{Algorithm} & \textbf{Reward} & \textbf{P1 (\%)} & \textbf{P2 (\%)} & \textbf{P3 (\%)} & \textbf{P4 (\%)} & \textbf{P7 (\%)} & \textbf{P10 (\%)} & \textbf{Total (\%)} \\ \midrule
+\textbf{Proposed FedQMIX (QoS-Aware)} & \textbf{740.2} & 27.2 & 87.2 & 86.5 & 100.0 & 100.0 & 100.0 & 84.5 \\
+Original FedQMIX (Baseline) & 169.1 & 100.0 & 94.9 & 99.4 & 88.4 & 82.9 & 99.0 & 92.0 \\
+Model-Aided QMIX (Centralized) & 162.3 & 78.1 & 100.0 & 100.0 & 64.6 & 69.3 & 86.5 & 85.3 \\
+Standard QMIX (Model-Free) & 174.7 & 100.0 & 96.4 & 79.7 & 100.0 & 98.6 & 98.5 & 92.9 \\
+\bottomrule
+\end{tabular}
+\end{table}

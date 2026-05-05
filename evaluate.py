@@ -114,10 +114,13 @@ if __name__ == '__main__':
 
     if args.model:
         path_estimation = result_dir + '/est_device_pos.npy'
-        est_device_pos = np.load(path_estimation)
-        est_device_pos = np.array([pos.flatten() for pos in est_device_pos[-1]])
-        plot_device(est_device_pos[params['unknown_device_idx']], 10, marker='+', marker_size=50, color='r')
-        
+        if os.path.exists(path_estimation):
+            est_device_pos = np.load(path_estimation, allow_pickle=True)
+            if len(est_device_pos) > 0:
+                est_device_pos = np.array([pos.flatten() for pos in est_device_pos[-1]])
+                plot_device(est_device_pos[params['unknown_device_idx']], 10, marker='+', marker_size=50, color='r')
+            else:
+                print("Warning: est_device_pos.npy is empty. Skipping estimated device positions plot.")
     plt.scatter(uav_start_pose[:, 0], uav_start_pose[:, 1], marker='H', s=150, c='lightgray',
                 label='UAV Start Zone')
     plt.scatter(uav_terminal_pose[:, 0], uav_terminal_pose[:, 1], marker='H', s=150, c='lightblue',

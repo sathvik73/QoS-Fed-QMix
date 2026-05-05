@@ -122,7 +122,8 @@ def fl_train(args, params):
     global_start_time = time.time()
     TIME_LIMIT = 11.5 * 3600  # 11.5 hours in seconds
 
-    for k in range(start_k, int(total_episodes / aggregation_period)):
+    try:
+        for k in range(start_k, int(total_episodes / aggregation_period)):
         if args.model:
             if episode_steps[0] % model_learning_period == 0:
                 # Set the position of the users to the default position for evaluation
@@ -195,10 +196,13 @@ def fl_train(args, params):
             print("Time limit of 11.5 hours reached. Safely shutting down federated training to prevent buffer corruption.")
             break
 
-    print(f"Final shutdown sequence: Securely dumping massive replay buffers to disk...")
-    for j in range(n_workers):
-        runners[j].buffer.save(suffix=str(j))
-    print("Federated shutdown complete.")
+    except KeyboardInterrupt:
+        print("\n[!] KeyboardInterrupt detected! Halting training and safely shutting down.")
+    finally:
+        print(f"Final shutdown sequence: Securely dumping massive replay buffers to disk...")
+        for j in range(n_workers):
+            runners[j].buffer.save(suffix=str(j))
+        print("Federated shutdown complete.")
 
 def train(args, params):
     learning_channel_model = None

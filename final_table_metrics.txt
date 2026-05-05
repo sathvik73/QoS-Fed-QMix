@@ -1,0 +1,6 @@
+Algorithm                                | Reward  | P3 Ratio | P2 Ratio | P1 Ratio | Total Ratio
+----------------------------------------------------------------------------------------------------
+Proposed FedQMIX (QoS-Aware)             |   740.2 |     86.5% |     87.2% |     27.2% |       84.5%
+Original FedQMIX (Baseline)              |   169.1 |     99.4% |     94.9% |    100.0% |       92.0%
+Model-Aided QMIX (Centralized)           |   162.3 |    100.0% |    100.0% |     78.1% |       85.3%
+Standard QMIX (Model-Free)               |   174.7 |     79.7% |     96.4% |    100.0% |       92.9%
